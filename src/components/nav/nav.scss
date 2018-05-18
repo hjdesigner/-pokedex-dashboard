@@ -1,0 +1,27 @@
+.component-nav {
+  list-style: none;
+  margin: 0;
+   svg {
+    width: 100%;
+    max-width: 24px;
+    margin-right: 15px;
+    fill: #FFF;
+  }
+  li {
+    margin: 0px 15px 10px;
+    a {
+      padding: 10px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      color: #FFF;
+      border-radius: 5px;
+      font-weight: 300;
+      font-size: 1.1em;
+      transition: all .25s ease-in-out;
+      &:hover {
+        background-color: #00acc1;
+      }
+    }
+  }
+}
