@@ -18,7 +18,7 @@ describe('Component <Nav />', () => {
   it('Should return inside the ul a li', () => {
     const wrapper = shallow((
       <Nav>
-        <li></li>
+        <li />
       </Nav>
     ))
     expect(wrapper.find('li')).to.have.length(1)
@@ -26,8 +26,8 @@ describe('Component <Nav />', () => {
   it('Should return inside the ul more one li', () => {
     const wrapper = shallow((
       <Nav>
-        <li></li>
-        <li></li>
+        <li />
+        <li />
       </Nav>
     ))
     expect(wrapper.find('li')).to.have.length(2)
@@ -35,19 +35,19 @@ describe('Component <Nav />', () => {
   it('Should return inside the ul a li with link and text', () => {
     const wrapper = shallow((
       <Nav>
-        <li><a href="#">Link</a></li>
+        <li><a href='#'>Link</a></li>
       </Nav>
     ))
-    expect(wrapper.contains(<li><a href="#">Link</a></li>)).to.equal(true)
+    expect(wrapper.contains(<li><a href='#'>Link</a></li>)).to.equal(true)
   })
   it('Should return inside the ul two li with link and text', () => {
     const wrapper = shallow((
       <Nav>
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
+        <li><a href='#'>Link 1</a></li>
+        <li><a href='#'>Link 2</a></li>
       </Nav>
     ))
-    expect(wrapper.contains(<li><a href="#">Link 1</a></li>)).to.equal(true)
-    expect(wrapper.contains(<li><a href="#">Link 2</a></li>)).to.equal(true)
+    expect(wrapper.contains(<li><a href='#'>Link 1</a></li>)).to.equal(true)
+    expect(wrapper.contains(<li><a href='#'>Link 2</a></li>)).to.equal(true)
   })
 })
